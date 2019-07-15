@@ -1,0 +1,49 @@
+source('/Users/nicksmith/Documents/Git/future_vcmax/optimal_vcmax_R/calc_optimal_vcmax.R')
+calc_optimal_vcmax()
+calc_optimal_vcmax(cao = seq(400, 1000, 100))
+calc_c
+calc_optimal_vcmax
+calc_c_dAjdJmax = function(temp, z, vpdo, cao, jv25, theta){#
+	#theta = 0.9#
+	patm = calc_patm(z)#
+	ca_pa = cao * 1e-6 * patm#
+	omega_c = calc_omega_c_dAjdJmax(temp, z, vpdo, cao, jv25, theta)#
+	gammastar_pa = calc_gammastar_pa(temp, z) # gamma star Pa#
+	chi = calc_chi(temp, z, vpdo, cao) # ci/ca		#
+	ci = chi * ca_pa # Pa#
+	m = ((ci - gammastar_pa)/(ci + (2 * gammastar_pa)))#
+	c_quad = -(theta)#
+	b_quad = 1#
+	a_quad1 = (omega_c + (1 - 2*theta))^2#
+	a_quad2 = a_quad1 / (1-theta)#
+	a_quad3 = a_quad2 + 4*theta#
+	a_quad = -1/a_quad3#
+	c_star = (-b_quad + sqrt(b_quad^2 - (4 * a_quad * c_quad)))/(2 * c_quad)#
+	c = (c_star * m) / 4#
+}
+source('/Users/nicksmith/Documents/Git/future_vcmax/optimal_vcmax_R/functions/calc_c.R')
+source('../optimal_vcmax_R/calc_optimal_vcmax.R')
+source('../optimal_vcmax_R/functions/calc_c.R')
+source('../optimal_vcmax_R/functions/test_functions/calc_c.R')
+calc_optimal_vcmax(cao = seq(400, 1000, 100))
+source('../optimal_vcmax_R/functions/test_functions/calc_c.R')
+calc_c()
+calc_c
+source('../optimal_vcmax_R/functions/test_functions/calc_c.R')
+calc_c()
+source('../optimal_vcmax_R/functions/test_functions/calc_c.R')
+dirname()
+dirname(parent.frame(2)$ofile)
+parent.frame(2)
+parent.frame
+ofile
+parent.frame(2)$ofile
+getSrcDirectory()[1]
+? getSrcDirectory
+dirname(sys.frame(1)$ofile)
+sys.frame(1)$ofile
+sys.frame(1)
+sys.frame
+library(rstudioapi)
+rstudioapi::getActiveDocumentContext()$path
+(1/32) * .05
