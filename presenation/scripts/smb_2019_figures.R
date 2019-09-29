@@ -94,7 +94,7 @@ chi_tg_c_plot = ggplot(data = tg_c_respone, aes(y = chi, x = tg_c)) +
         panel.grid.major = element_line(colour = "grey")) +
   geom_line(colour = 'darkblue', size = 6, linetype = 1) +
   xlab('Temperature (°C)') +
-  ylab('χ') +
+  ylab(expression(italic('C')[i] * '/' * italic('C')[a])) +
   ylim(0.5, 1)
 
 chi_vpdo_plot = ggplot(data = vpdo_respone, aes(y = chi, x = vpdo)) +
@@ -107,7 +107,7 @@ chi_vpdo_plot = ggplot(data = vpdo_respone, aes(y = chi, x = vpdo)) +
         panel.grid.major = element_line(colour = "grey")) +
   geom_line(colour = 'darkblue', size = 6, linetype = 1) +
   xlab('VPD (kPa)') +
-  ylab('χ') +
+  ylab(expression(italic('C')[i] * '/' * italic('C')[a])) +
   ylim(0.5, 1) +
   xlim(0, 10)
 
@@ -121,7 +121,7 @@ chi_z_plot = ggplot(data = z_respone, aes(y = chi, x = z)) +
         panel.grid.major = element_line(colour = "grey")) +
   geom_line(colour = 'darkblue', size = 6, linetype = 1) +
   xlab('Elevation (m)') +
-  ylab('χ') +
+  ylab(expression(italic('C')[i] * '/' * italic('C')[a])) +
   ylim(0.5, 1) 
   # xlim(0, 10)
 
@@ -135,7 +135,7 @@ chi_cao_plot = ggplot(data = cao_respone, aes(y = chi, x = cao)) +
         panel.grid.major = element_line(colour = "grey")) +
   geom_line(colour = 'darkblue', size = 6, linetype = 1) +
   xlab(expression('CO'[2] * '(Pa)')) +
-  ylab('χ') +
+  ylab(expression(italic('C')[i] * '/' * italic('C')[a])) +
   ylim(0.5, 1) 
 # xlim(0, 10)
 
